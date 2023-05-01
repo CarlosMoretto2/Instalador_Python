@@ -35,17 +35,9 @@ if package in ['S', 's']:
     time.sleep(1)
     pyautogui.press('enter')
     time.sleep(1)
-    pyautogui.write("winget install Google.Chrome && winget install 9NZVDKPMR9RD && winget install RARLab.WinRAR && winget install XPDP273C0XHQH2 && widget install AnyDeskSoftwareGmbH.AnyDesk && winget install 9WZDNCRD29V9")
+    pyautogui.write("winget install Google.Chrome && winget install Mozilla.Firefox && winget install RARLab.WinRAR && winget install XPDP273C0XHQH2 && widget install AnyDeskSoftwareGmbH.AnyDesk && winget install 9WZDNCRD29V9")
     pyautogui.press('enter')
 
-
-    pyautogui.hotkey('winleft', 'r')
-    pyautogui.write('cmd')
-    time.sleep(1)
-    pyautogui.press('enter')
-    time.sleep(1)
-    pyautogui.write("winget install Google.Chrome && winget install 9NZVDKPMR9RD && winget install RARLab.WinRAR && winget install XPDP273C0XHQH2 && widget install AnyDeskSoftwareGmbH.AnyDesk && winget install 9WZDNCRD29V9")
-    pyautogui.press('enter')
 
 elif package in ['N', 'n']: 
     os.system('cls') or None
@@ -68,7 +60,7 @@ elif chrm in ['N', 'n']:
         chrm = ""
 
 if firf in ['S', 's']:  
-        firf = "winget install 9NZVDKPMR9RD && "
+        firf = "winget install Mozilla.Firefox && "
 elif firf in ['N', 'n']:
         firf = ""
 

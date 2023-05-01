@@ -1,28 +1,56 @@
 import pyautogui
-import pytime
+import time
 import win32com.client as win32
 from win32api import GetKeyState 
 from win32con import VK_NUMLOCK 
 import os
+
+nl = GetKeyState(VK_NUMLOCK) 
 
 print("=======================================\n")
 print("         Automação de processo         ")
 print("Prefeitura Municipal de Jaguariúna 2023\n")
 print("=======================================")
 
+print("\n\nLembre-se de desabilitar a solicitação de acesso nível ADM do windows, aperte win e digite UAC!")
 
 package = input("\n\nDeseja instalar o pacote de software padrão? Chrome, Firefox, Winrar, Adobe Reader, AnyDesk, Office. \nResponder com s/n: ")
 
 if package in ['S', 's']:
+    
     pyautogui.hotkey('winleft', 'r')
-    pyautogui.press('delete')
-    pyautogui.write('cmd')
+    pyautogui.write('powershell')
     pyautogui.press('enter')
-    pyautogui.write("winget install Google.Chrome; winget install 9NZVDKPMR9RD; winget install RARLab.WinRAR; inget install XPDP273C0XHQH2; widget install AnyDeskSoftwareGmbH.AnyDesk; winget install 9WZDNCRD29V9;")
+    time.sleep(1)
+    pyautogui.write('Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe')
     pyautogui.press('enter')
 
+    if nl == 0: 
+
+        pyautogui.pause = 1.0
+
+        pyautogui.hotkey('winleft', 'r')
+        pyautogui.write('cmd')
+        time.sleep(1)
+        pyautogui.press('enter')
+        time.sleep(1)
+        pyautogui.write("winget install Google.Chrome && winget install 9NZVDKPMR9RD && winget install RARLab.WinRAR && winget install XPDP273C0XHQH2 && widget install AnyDeskSoftwareGmbH.AnyDesk && winget install 9WZDNCRD29V9")
+        pyautogui.press('enter')
+
+    elif nl == 1:
+
+        pyautogui.pause = 1.0
+
+        pyautogui.hotkey('winleft', 'r')
+        pyautogui.write('cmd')
+        time.sleep(1)
+        pyautogui.press('enter')
+        time.sleep(1)
+        pyautogui.write("winget install Google.Chrome && winget install 9NZVDKPMR9RD && winget install RARLab.WinRAR && winget install XPDP273C0XHQH2 && widget install AnyDeskSoftwareGmbH.AnyDesk && winget install 9WZDNCRD29V9")
+        pyautogui.press('enter')
+
 elif package in ['N', 'n']: 
-    os.system('clear') or None
+    os.system('cls') or None
 
     print("=======================================\n")
     print("         Automação de processo         ")
@@ -37,32 +65,32 @@ elif package in ['N', 'n']:
     offc = input("Deseja instalar o Office?\nResponder com s/n: ")
  
 if chrm in ['S', 's']:  
-        chrm = "winget install Google.Chrome; "
+        chrm = "winget install Google.Chrome && "
 elif chrm in ['N', 'n']:
         chrm = ""
 
 if firf in ['S', 's']:  
-        firf = "winget install 9NZVDKPMR9RD; "
+        firf = "winget install 9NZVDKPMR9RD && "
 elif firf in ['N', 'n']:
         firf = ""
 
 if winr in ['S', 's']:  
-        winr = "winget install RARLab.WinRAR; "
+        winr = "winget install RARLab.WinRAR && "
 elif winr in ['N', 'n']:
         winr = ""
 
 if adbr in ['S', 's']:  
-        adbr = "winget install XPDP273C0XHQH2; "
+        adbr = "winget install XPDP273C0XHQH2 && "
 elif adbr in ['N', 'n']:
         adbr = ""
 
 if anyd in ['S', 's']:  
-        anyd = "widget install AnyDeskSoftwareGmbH.AnyDesk; "
+        anyd = "widget install AnyDeskSoftwareGmbH.AnyDesk && "
 elif anyd in ['N', 'n']:
          anyd = ""
 
 if offc in ['S', 's']:  
-        offc = "winget install 9WZDNCRD29V9; "
+        offc = "winget install 9WZDNCRD29V9"
 elif offc in ['N', 'n']:
         offc = ""
     

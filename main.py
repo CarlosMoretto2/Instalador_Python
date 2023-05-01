@@ -35,7 +35,7 @@ if package in ['S', 's']:
     time.sleep(1)
     pyautogui.press('enter')
     time.sleep(1)
-    pyautogui.write("winget install Google.Chrome && winget install Mozilla.Firefox && winget install RARLab.WinRAR && winget install XPDP273C0XHQH2 && widget install AnyDeskSoftwareGmbH.AnyDesk && winget install 9WZDNCRD29V9")
+    pyautogui.write("winget install Google.Chrome && winget install Mozilla.Firefox && winget install RARLab.WinRAR && winget install Adobe.Acrobat.Reader.64-bit && widget install AnyDeskSoftwareGmbH.AnyDesk && winget install Microsoft.Office")
     pyautogui.press('enter')
 
 
@@ -70,7 +70,7 @@ elif winr in ['N', 'n']:
         winr = ""
 
 if adbr in ['S', 's']:  
-        adbr = "winget install XPDP273C0XHQH2 && "
+        adbr = "winget install Adobe.Acrobat.Reader.64-bit && "
 elif adbr in ['N', 'n']:
         adbr = ""
 
@@ -80,7 +80,7 @@ elif anyd in ['N', 'n']:
          anyd = ""
 
 if offc in ['S', 's']:  
-        offc = "winget install 9WZDNCRD29V9"
+        offc = "winget install Microsoft.Office"
 elif offc in ['N', 'n']:
         offc = ""
     

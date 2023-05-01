@@ -1,0 +1,13 @@
+py -m pip install pyautogui 
+-- instalando a biblioteca python teclado
+
+pip install pypiwin32 
+-- Instalando biblioteca 
+
+pip install pytime
+-- Instalando biblioteca tempo
+
+ 
+
+ 
+

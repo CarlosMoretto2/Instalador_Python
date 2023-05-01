@@ -5,14 +5,12 @@ from win32api import GetKeyState
 from win32con import VK_NUMLOCK 
 import os
 
-package = 0
-
 print("=======================================\n")
 print("         Automação de processo         ")
 print("Prefeitura Municipal de Jaguariúna 2023\n")
 print("=======================================")
 
-# print("\n\nDeseja instalar o pacote de software padrão? Chrome, Firefox, Winrar, Adobe Reader, AnyDesk. Responder com s/n")
+
 package = input("\n\nDeseja instalar o pacote de software padrão? Chrome, Firefox, Winrar, Adobe Reader, AnyDesk, Office. \nResponder com s/n: ")
 
 if package in ['S', 's']:

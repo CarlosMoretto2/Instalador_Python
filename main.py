@@ -19,6 +19,7 @@ if package in ['S', 's']:
     pyautogui.write('cmd')
     pyautogui.press('enter')
     pyautogui.write("winget install Google.Chrome; winget install 9NZVDKPMR9RD; winget install RARLab.WinRAR; inget install XPDP273C0XHQH2; widget install AnyDeskSoftwareGmbH.AnyDesk; winget install 9WZDNCRD29V9;")
+    pyautogui.press('enter')
 
 elif package in ['N', 'n']: 
     os.system('clear') or None
@@ -71,7 +72,9 @@ pyautogui.hotkey('winleft', 'r')
 pyautogui.press('delete')
 pyautogui.write('cmd')
 pyautogui.press('enter')
-pyautogui.write(result)
+pyautogui.write(''+result)
+pyautogui.press('enter')
+
 
     
 

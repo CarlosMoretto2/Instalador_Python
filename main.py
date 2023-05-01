@@ -87,6 +87,16 @@ elif offc in ['N', 'n']:
 result = chrm + firf + winr + adbr + anyd + offc
 
 pyautogui.hotkey('winleft', 'r')
+pyautogui.write('powershell')
+pyautogui.press('enter')
+time.sleep(1)
+pyautogui.write('Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe')
+pyautogui.press('enter')
+time.sleep(5)
+pyautogui.write('taskkill /f /im powershell.exe')
+pyautogui.press('enter')
+
+pyautogui.hotkey('winleft', 'r')
 pyautogui.press('delete')
 pyautogui.write('cmd')
 pyautogui.press('enter')

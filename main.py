@@ -5,8 +5,6 @@ from win32api import GetKeyState
 from win32con import VK_NUMLOCK 
 import os
 
-nl = GetKeyState(VK_NUMLOCK) 
-
 print("=======================================\n")
 print("         Automação de processo         ")
 print("Prefeitura Municipal de Jaguariúna 2023\n")
@@ -24,30 +22,30 @@ if package in ['S', 's']:
     time.sleep(1)
     pyautogui.write('Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe')
     pyautogui.press('enter')
+    time.sleep(5)
+    pyautogui.write('taskkill /f /im powershell.exe')
+    pyautogui.press('enter')
 
-    if nl == 0: 
 
-        pyautogui.pause = 1.0
 
-        pyautogui.hotkey('winleft', 'r')
-        pyautogui.write('cmd')
-        time.sleep(1)
-        pyautogui.press('enter')
-        time.sleep(1)
-        pyautogui.write("winget install Google.Chrome && winget install 9NZVDKPMR9RD && winget install RARLab.WinRAR && winget install XPDP273C0XHQH2 && widget install AnyDeskSoftwareGmbH.AnyDesk && winget install 9WZDNCRD29V9")
-        pyautogui.press('enter')
+    pyautogui.pause = 1.0
 
-    elif nl == 1:
+    pyautogui.hotkey('winleft', 'r')
+    pyautogui.write('cmd')
+    time.sleep(1)
+    pyautogui.press('enter')
+    time.sleep(1)
+    pyautogui.write("winget install Google.Chrome && winget install 9NZVDKPMR9RD && winget install RARLab.WinRAR && winget install XPDP273C0XHQH2 && widget install AnyDeskSoftwareGmbH.AnyDesk && winget install 9WZDNCRD29V9")
+    pyautogui.press('enter')
 
-        pyautogui.pause = 1.0
 
-        pyautogui.hotkey('winleft', 'r')
-        pyautogui.write('cmd')
-        time.sleep(1)
-        pyautogui.press('enter')
-        time.sleep(1)
-        pyautogui.write("winget install Google.Chrome && winget install 9NZVDKPMR9RD && winget install RARLab.WinRAR && winget install XPDP273C0XHQH2 && widget install AnyDeskSoftwareGmbH.AnyDesk && winget install 9WZDNCRD29V9")
-        pyautogui.press('enter')
+    pyautogui.hotkey('winleft', 'r')
+    pyautogui.write('cmd')
+    time.sleep(1)
+    pyautogui.press('enter')
+    time.sleep(1)
+    pyautogui.write("winget install Google.Chrome && winget install 9NZVDKPMR9RD && winget install RARLab.WinRAR && winget install XPDP273C0XHQH2 && widget install AnyDeskSoftwareGmbH.AnyDesk && winget install 9WZDNCRD29V9")
+    pyautogui.press('enter')
 
 elif package in ['N', 'n']: 
     os.system('cls') or None
